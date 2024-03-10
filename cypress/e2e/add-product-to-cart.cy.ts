@@ -1,7 +1,11 @@
 describe('add product to cart', () => {
-  it('should be able to navigate to the product page and add it to the cart', () => {
-    // Visita a página inicial da aplicação
+  beforeEach(()=>{
+    
     cy.visit('http://localhost:3000')
+  })
+
+  it('should be able to navigate to the product page and add it to the cart', () => {
+   
 
     // Clica no primeiro link de produto encontrado na página inicial
     cy.get('a[href^="/product"]').first().click()
